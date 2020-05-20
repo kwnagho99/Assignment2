@@ -84,11 +84,65 @@ void blockcmp(){
 }
 
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
-void datecmp(){
-    
+
+void datecmp() {
+
+    printf("date compare\n");
+
+    if (time1_.tm_mon + 1 < time2_.tm_mon + 1)
+
+        printf("text1 is early\n");
+
+    else if (time1_.tm_mon + 1 > time2_.tm_mon + 1)
+
+        printf("text2 is early\n");
+
+    else
+
+    {
+
+        if (time1_.tm_mday < time2_.tm_mday)
+
+            printf("text1 is early\n");
+
+        else  if (time1_.tm_mday > time2_.tm_mday)
+
+            printf("text2 is early\n");
+
+        else
+
+            printf("same date\n");
+
+    }
+    printf("\n");
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
-void timecmp(){
-    
+
+void timecmp() {
+    printf("time compare\n");
+
+
+    if (time1_.tm_hour < time2_.tm_hour)
+
+        printf("text1 is early\n");
+
+    else if (time1_.tm_hour > time2_.tm_hour)
+
+        printf("text2 is early\n");
+    else
+
+    {
+        if (time1_.tm_min < time2_.tm_min)
+
+            printf("text1 is early\n");
+
+        else if (time1_.tm_min > time2_.tm_min)
+
+            printf("text2 is early\n");
+
+        else
+            printf("same time\n");
+    }
+    printf("\n");
 }
