@@ -28,10 +28,7 @@ int main(){
     datecmp();
     timecmp();
 }
-<<<<<<< .merge_file_a13544
 
-=======
->>>>>>> .merge_file_a19016
 //파일 1의 정보를 가져오는 함수 작성
 void filestat1(){
 	stat("text1", &stat1);
@@ -57,12 +54,33 @@ void filetime2(){
 
 //두 개의 파일 크기를 비교하는 함수 작성
 void sizecmp(){
-    
+
+    printf("size compare\n");
+    if (stat1.st_size > stat2.st_size)
+        printf("text1 is bigger\n");
+
+    else if (stat1.st_size < stat2.st_size)
+        printf("text2 is bigger \n");
+
+    else if (stat1.st_size == stat2.st_size)
+        printf("sizes are equal\n");
+
+
+    printf("\n");
 }
 
 //두 개의 파일 블락 수를 비교하는 함수 작성
 void blockcmp(){
-    
+    printf("block compare\n");
+    if (stat1.st_blocks > stat2.st_blocks)
+        printf("text1 is bigger\n");
+
+    else if (stat1.st_blocks < stat2.st_blocks)
+        printf("text2 is bigger\n");
+
+    else if (stat1.st_blocks == stat2.st_blocks)
+        printf("blocks are equal\n");
+    printf("\n");
 }
 
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
