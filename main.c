@@ -45,6 +45,7 @@ void filetime1(){
 }
 
 //파일 2의 시간 정보를 가져오는 함수 작성
+
 void filetime2(){
     time2 = localtime(&stat2.st_mtime);
     time2_ = *time2;
